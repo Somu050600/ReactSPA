@@ -1,0 +1,44 @@
+.message_div{
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+.message_div:hover{
+    background-color: #F6F9F8;
+    cursor: pointer;
+}
+.message_div img{
+    border-radius:50%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0 15px;
+}
+.message_div span{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.message_div span:nth-child(1){
+    max-width: 30ch;
+}
+.message_div #profile_name{
+    max-width: 13ch;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.message_div #profile_id{
+    max-width: 13ch;
+    margin-right: 5px;
+    font-size: 15px;
+}
+.profile_chat{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+}
+.pnit{
+    display: flex;
+}

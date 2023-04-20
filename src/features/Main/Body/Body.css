@@ -1,0 +1,47 @@
+
+.body{
+    display: flex;
+    flex-direction: row;
+}
+.middle{
+    height:auto;
+    border-right: solid #EEF2F4 1px;
+}
+.right{
+    width: 350px;
+    height: 150vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0 30px;
+    position: sticky;
+    top: -50vh;
+}
+.messages1{
+    position: fixed;
+    bottom: -0vh;
+    right: 1vw;
+    width: 400px;
+    height: 74vh;
+    border: solid rgb(239,243,244) 1px;
+    z-index: 3;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    box-shadow: -1px -1px 5px #E5E6EA, 1px -1px 5px #E5E6EA ;
+    transition: all 1s ease-out;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.messages2{
+    position: fixed;
+    bottom: -67vh;
+    right: 1vw;
+    width: 400px;
+    height: 74vh;
+    border: solid rgb(239,243,244) 1px;
+    z-index: 3;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    box-shadow: -1px -1px 5px #E5E6EA, 1px -1px 5px #E5E6EA ;
+    transition: 1s ease-out;
+    overflow: hidden;
+}

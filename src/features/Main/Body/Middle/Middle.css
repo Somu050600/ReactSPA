@@ -1,0 +1,7 @@
+.middle{
+    display: flex;
+    border: solid #EEF2F4 1px;
+    width: 600px;
+    height: 100%;
+    bottom: 0;
+}

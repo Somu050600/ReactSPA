@@ -1,0 +1,122 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+#back_arrow{
+    margin: 0;
+    transform: translateX(-10px);
+}
+.chat .messages_title{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    border-bottom: solid #EFF3F4 1px;
+    position: sticky;
+    top: 0;
+}
+#Chat_header{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    width: 80%;
+}
+.chat #profile_name{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    width: auto;
+    display: inline;
+}
+.chat #profile_id{
+    font-size: 13px;
+    line-height: 15px;
+    width: auto;
+    display: inline;
+}
+
+
+
+.message_body{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: flex-end;
+    min-height: 60vh;
+    overflow-x: hidden;
+    overflow-y: visible ;
+    z-index: -2;
+}
+
+
+
+
+
+
+
+.message_input_bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:110%;
+    position: sticky;
+    bottom: 0;
+    z-index: 0;
+    background-color: #ffffff;
+    padding: 4px 5px;
+    border-top: solid #EFF3F4 1px;
+}
+.message_input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:90%;
+    position: sticky;
+    bottom: 0;
+    z-index: 0;
+    border-radius: 17px;
+    background-color: #EFF3F4;
+    padding: 4px 5px;
+}
+
+.message_input img{
+    filter: invert(64%) sepia(42%) saturate(7236%) hue-rotate(180deg) brightness(98%) contrast(92%);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.message_input img:hover{
+    background-color: #eff3f42c;
+}
+.message_input input{
+    background-color: #EFF3F4;
+    width: 60%;
+    border: none;
+}
+.message_input input:focus{
+    border: none;
+    outline: none;
+}
+
+.message_input button {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    outline: none;
+}
+.message_input button img {
+    padding: 5px;
+    border-radius: 50%;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}

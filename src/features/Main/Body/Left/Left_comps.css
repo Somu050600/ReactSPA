@@ -35,11 +35,11 @@ a:active {
     border-radius: 25px; 
     transition: .1s;
 }
-img{
+.Left_comps img{
     padding: 10px 20px;
     padding-left: 10px;
 }
-span{
+.Left_comps span{
     height: 25px;
     width: auto;
 }

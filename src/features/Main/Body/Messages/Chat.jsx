@@ -20,6 +20,7 @@ function Chat() {
         return    obj.profile_id === profile_id;
     })
     let finalChat = AllChats.value[idx].msgs;
+    let profile_photo_url = AllChats.value[idx].img_url;
 
     const idAndMsg = {
         id : profile_id,
@@ -51,21 +52,26 @@ function Chat() {
                     <span id='profile_id'>@{profile_id}</span>
                 </div>
                 <div onClick={() => {dispatch(msgsToggle())}}>
-                    <img className={isUp ? 'arrow1': 'arrow2' } src={process.env.PUBLIC_URL + '/images/Messages/double-up-arrow.svg'} alt="" width="20px" height="20px" />
+                    <img className={!isUp ? 'arrow1': 'arrow2' } src={process.env.PUBLIC_URL + '/images/Messages/double-up-arrow.svg'} alt="" width="20px" height="20px" />
                 </div>
             </div>
                 <div class="message_body">
-                    <img src={process.env.PUBLIC_URL + '/images/Messages/media.svg'} alt="" width="200px" height="200px" />
-                    <img src={process.env.PUBLIC_URL + '/images/Messages/GIF.svg'} alt="" width="200px" height="200px" />
-                    <img src={process.env.PUBLIC_URL + '/images/Messages/emoji.svg'} alt="" width="200px" height="200px" />
+
+                    <div className='chat_profile'>
+                    <img src={process.env.PUBLIC_URL + profile_photo_url} alt="" width="100px" height="100px" />
+                    <span id='profile_name'>{profile_name}</span>
+                    <span id='profile_id'>@{profile_id}</span>
+                    </div>
+
+                    <div className='chat_body'>
                     {
-                        
                         finalChat.map ((obj)=>{
                             return (
-                                <div>{obj}</div>
+                                <span>{obj}</span>
                             )
                         })
                     }
+                    </div>
                 </div>
             <div id="scroll_to"></div>
             <div class="message_input_bg">

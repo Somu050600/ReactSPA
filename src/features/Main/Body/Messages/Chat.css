@@ -38,19 +38,65 @@
 }
 
 
+.chat_profile img{
+    margin: 0%;
+    padding: 0;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
 
 .message_body{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     min-height: 60vh;
     overflow-x: hidden;
     overflow-y: visible ;
     z-index: -2;
+    /* border: solid; */
 }
 
+.chat_profile{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eff3f479;
+    border-radius: 10px;
+}
+.chat_profile:hover {
+    
+    cursor: pointer;
+}
+.chat_profile *{
+    padding: 3px;
+}
 
+.chat_body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.chat_body span{
+    background-color: #1F8DDB;
+    color: white;
+    margin: 3px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    max-width: 25ch;
+    overflow-wrap: break-word;
+}
+.chat_body span:nth-last-child(1){
+    border-bottom-right-radius: 5px;
+}
 
 
 
@@ -93,9 +139,14 @@
 }
 .message_input input{
     background-color: #EFF3F4;
+    height: 100%;
     width: 60%;
     border: none;
 }
+/* .message_input input:active{
+    width: 100%;
+    border: solid black 1px;
+} */
 .message_input input:focus{
     border: none;
     outline: none;

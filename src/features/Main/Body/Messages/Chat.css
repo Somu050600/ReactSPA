@@ -11,7 +11,7 @@
 }
 .chat .messages_title{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     border-bottom: solid #EFF3F4 1px;
     position: sticky;
@@ -42,7 +42,7 @@
 .message_body{
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     justify-content: flex-end;
     min-height: 60vh;
     overflow-x: hidden;

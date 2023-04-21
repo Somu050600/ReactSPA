@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 function Body(props){
 
-    const ToggleMsg = useSelector((state) => state.ToggleMsgSlice)
+    const ToggleMsg = useSelector((state) => state.ToggleMsg)
     const visible = ToggleMsg.value.msgs;
 
     return(

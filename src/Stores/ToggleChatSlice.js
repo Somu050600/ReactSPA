@@ -10,7 +10,7 @@ const initialState = {
 };
 
 export const ToggleChatSlice = createSlice({
-    name : 'currIdSlice',
+    name : 'ToggleChatSlice',
     initialState, 
     reducers: {
         ToggleChatCombiner : (state,action) => {

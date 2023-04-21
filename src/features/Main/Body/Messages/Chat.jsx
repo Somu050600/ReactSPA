@@ -5,7 +5,7 @@ import { combinedActions } from "../../../../Stores/ToggleMsgSlice";
 import { addMsg } from '../../../../Stores/PeopleDataSlice';
 import { useState } from 'react';
 
-function Chat(props) {
+function Chat() {
 
     const dispatch = useDispatch();
     const AllChats = useSelector((state) => state.PeopleData);

@@ -4,22 +4,22 @@ import Chat from "./Chat";
 import { useSelector, useDispatch } from "react-redux";
 import { combinedActions } from "../../../../Stores/ToggleMsgSlice";
 
-function Messages(props){
+function Messages(){
     const msg = useSelector((state) => state.PeopleData);
+    const msgComps = msg.value;
     const ToggleChat = useSelector((state) => state.ToggleChat);
     const ToggleArrow = useSelector ( (state) => state.ToggleMsg);
     const isChat = ToggleChat.value.isChat;
-    const currId = ToggleChat.value.currId;
-    const currName = ToggleChat.value.currName;
     const isUp = ToggleArrow.value.arrow;
     const dispatch = useDispatch();
+
     return(
 
         <>
 
             {isChat?(
                 <>
-                    <Chat profile_id={currId} profile_name={currName} />
+                    <Chat/>
                 </>
                 ):(
                 <>
@@ -34,12 +34,9 @@ function Messages(props){
                         <span>Message requests</span>
                     </div>
                     {
-                        msg.map( (obj)=> {
-                                return(
-                                 <Messages_comps url={obj.url} img_url={obj.img_url} profile_name={obj.profile_name} profile_id={obj.profile_id} time={obj.time} msgs={obj.msgs} />
-                             )
-                            }
-                        )
+                        msgComps.map((obj) => {
+                            return <Messages_comps url={obj.url} img_url={obj.img_url} profile_name={obj.profile_name} profile_id={obj.profile_id} time={obj.time} msgs={obj.msgs} />
+                        })
                     }
                 </>
             )}

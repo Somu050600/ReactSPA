@@ -1,5 +1,5 @@
 import "./Messages_comps.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import{ ToggleChatCombiner } from "../../../../Stores/ToggleChatSlice"
 
 
@@ -10,10 +10,21 @@ function Messages_comps(props){
         profile_name : props.profile_name,
     };
 
+
+    const scrollAndChat = (obj) => {
+
+        dispatch(ToggleChatCombiner(obj));
+
+        setTimeout(() => {
+            let element = document.getElementById("scroll_to");
+            element.scrollIntoView();
+        }, 1);
+    }
+    
     return(
         <>
             
-                <div class="message_div" onClick={dispatch(ToggleChatCombiner(profile))}>
+                <div class="message_div" onClick={() => {scrollAndChat(profile)}}>
                     <div>
                     <img id="profile_photo" src={process.env.PUBLIC_URL + props.img_url} alt={process.env.PUBLIC_URL + "/images/Messages/profile_photos/default_img.png"} width="45px" height="45px" />
                     </div>

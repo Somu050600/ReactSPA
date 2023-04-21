@@ -5,10 +5,10 @@ import Messgaes from "./Messages/Messages";
 import "./Body.css";
 import { useSelector } from "react-redux";
 
-function Body(props){
+function Body(){
 
     const ToggleMsg = useSelector((state) => state.ToggleMsg)
-    const visible = ToggleMsg.value.msgs;
+    const visible = ToggleMsg.value;
 
     return(
 

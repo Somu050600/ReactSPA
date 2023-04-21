@@ -4,7 +4,8 @@ import { useSelector } from "react-redux";
 
 
 function Left(){
-    const LeftData = useSelector((state) => state.LeftData.value)
+    const LeftData = useSelector((state) => state.LeftData);
+    const leftComps = LeftData.value;
 
     return(
 
@@ -15,7 +16,7 @@ function Left(){
                 </a>
             </div>
             {
-                LeftData.map( (obj)=> {
+                leftComps.map( (obj)=> {
                         return(
                             <Left_comps url={obj.url} img_url={obj.img_url} title={obj.title} />
                         )

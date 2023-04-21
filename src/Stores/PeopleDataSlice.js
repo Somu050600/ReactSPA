@@ -46,9 +46,9 @@ export const PeopleDataSlice = createSlice({
     reducers : {
         addMsg : (state, action) => {
             let idx = state.value.findIndex( (obj)=>{
-                return    obj.profile_id === action.payload.profile_id;
+                return    obj.profile_id === action.payload.id;
             })
-            state.value[idx].msgs = [...state.value[idx].msgs, action.payload.String];
+            state.value[idx].msgs = [...state.value[idx].msgs, action.payload.str];
         },
     },
 });

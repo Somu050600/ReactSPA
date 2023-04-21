@@ -2,15 +2,15 @@ import Messages_comps from "./Messages_comps";
 import './Messages.css';
 import Chat from "./Chat";
 import { useSelector, useDispatch } from "react-redux";
-import { combinedActions } from "../../../../Stores/ToggleMsgSlice";
+import { msgsToggle } from "../../../../Stores/ToggleMsgSlice";
 
 function Messages(){
-    const msg = useSelector((state) => state.PeopleData);
-    const msgComps = msg.value;
-    const ToggleChat = useSelector((state) => state.ToggleChat);
-    const ToggleArrow = useSelector ( (state) => state.ToggleMsg);
-    const isChat = ToggleChat.value.isChat;
-    const isUp = ToggleArrow.value.arrow;
+    const allData = useSelector((state) => state.PeopleData);
+    const msgComps = allData.value;
+    const chatToggle = useSelector((state) => state.ToggleChat);
+    const arrowToggle = useSelector ( (state) => state.ToggleMsg);
+    const isChat = chatToggle.value.isChat;
+    const isUp = arrowToggle.value;
     const dispatch = useDispatch();
 
     return(
@@ -23,8 +23,8 @@ function Messages(){
                 </>
                 ):(
                 <>
-                    <div class="messages_title" onClick={dispatch(combinedActions())} >
-                <       span>Messages</span>
+                    <div class="messages_title" onClick={() => {dispatch(msgsToggle())}} >
+                        <span>Messages</span>
                         <img src={process.env.PUBLIC_URL + '/images/Messages/Message.svg'} alt="" width="20px" height="20px" />
                         <img className={isUp ? 'arrow2': 'arrow1' } src={process.env.PUBLIC_URL + '/images/Messages/double-up-arrow.svg'} alt="" width="20px" height="20px" />
                     </div> 

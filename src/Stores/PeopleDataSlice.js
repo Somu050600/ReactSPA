@@ -9,7 +9,7 @@ const initialState = {
             {url:"", img_url:"/images/Messages/profile_photos/budda.jpg", profile_name: "Budda", profile_id: "budda_.1", time : "10:00", last_msg:"", msgs:[
                 "Hi", "How are you?"
             ]},
-            {url:"", img_url:"/images/Messages/profile_photos/bharath.jpg", profile_name: "Bharath", profile_id: "Style_roomie", time : "10:00", last_msg:"", msgs:[
+            {url:"", img_url:"/images/Messages/profile_photos/bharath.JPG", profile_name: "Bharath", profile_id: "Style_roomie", time : "10:00", last_msg:"", msgs:[
                 "Hi", "How are you?"
             ],}, 
             {url:"", img_url:"/images/Messages/profile_photos/suri.jpg", profile_name: "Sureedu", profile_id: "Style_is_easy", time : "10:00", last_msg:"", msgs:[
@@ -24,7 +24,7 @@ const initialState = {
             {url:"", img_url:"/images/Messages/profile_photos/adith.jpg", profile_name: "Adith Old", profile_id: "adith_aptha", time : "10:00", last_msg:"", msgs:[
                 "Hi", "How are you?"
             ],}, 
-            {url:"", img_url:"/images/Messages/profile_photos/nithin.jpg", profile_name: "Nithin", profile_id: "Paluchuri", time : "10:00", last_msg:"", msgs:[
+            {url:"", img_url:"/images/Messages/profile_photos/nithin.JPG", profile_name: "Nithin", profile_id: "Paluchuri", time : "10:00", last_msg:"", msgs:[
                 "Hi", "How are you?"
             ],}, 
             {url:"", img_url:"/images/Messages/profile_photos/gokul.jpg", profile_name: "Gokul Javvaji", profile_id: "gokul_j", time : "10:00", last_msg:"", msgs:[
@@ -33,7 +33,7 @@ const initialState = {
             {url:"", img_url:"/images/Messages/profile_photos/sharan.jpg", profile_name: "sharan T", profile_id: "Thummala_s", time : "10:00", last_msg:"", msgs:[
                 "Hi", "How are you?"
             ],}, 
-            {url:"", img_url:"/images/Messages/profile_photos/akhil.jpg", profile_name: "akhil", profile_id: "akhil", time : "10:00", last_msg:"", msgs:[
+            {url:"", img_url:"/images/Messages/profile_photos/Akhil.jpg", profile_name: "akhil", profile_id: "akhil", time : "10:00", last_msg:"", msgs:[
                 "Hi", "How are you?"
             ],}, 
         ],

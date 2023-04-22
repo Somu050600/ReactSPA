@@ -2,27 +2,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 0 16px;
 }
 #back_arrow{
-    margin: 0;
+    margin:0px 0px 0px 10px;
     transform: translateX(-10px);
 }
 .chat .messages_title{
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding:0px;
+    justify-content: flex-start;
     border-bottom: solid #EFF3F4 1px;
     position: sticky;
     top: 0;
+    /* border: solid; */
 }
-#Chat_header{
+
+.chat .arrow1{
+    margin-left: auto;
+    /* border: solid; */
+    margin: 10px;
+}
+.chat .arrow2{
+    margin-left: auto;
+    /* border: solid; */
+    margin: 10px;
+}
+.Chat_header{
     display: flex;
     flex-direction: column;
+    padding: 10px;
     margin-left: 0%;
-    width: 80%;
+    width: 5000px;
+    /* border: solid red; */
 }
+
 .chat #profile_name{
     font-size: 20px;
     font-weight: 700;
@@ -45,9 +62,7 @@
     border-radius: 50%;
 }
 
-
-
-.message_body{
+.message_body {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -55,8 +70,7 @@
     justify-content: flex-end;
     min-height: 60vh;
     overflow-x: hidden;
-    overflow-y: visible ;
-    z-index: -2;
+    overflow-y: scroll ;
     /* border: solid; */
 }
 
@@ -71,7 +85,6 @@
     border-radius: 10px;
 }
 .chat_profile:hover {
-    
     cursor: pointer;
 }
 .chat_profile *{
@@ -84,6 +97,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+    /* overflow-y: scroll; */
 }
 .chat_body span{
     background-color: #1F8DDB;
@@ -107,6 +121,7 @@
     align-items: center;
     justify-content: center;
     width:110%;
+    /* margin-top: auto; */
     position: sticky;
     bottom: 0;
     z-index: 0;

@@ -32,27 +32,32 @@ function Chat() {
     }
 
     const msgAdding = (obj) => {
+        if(string){
         dispatch(addMsg(obj));
-
+        setString('');
+        document.getElementById("inputMsg").value = "";
         // setTimeout = (() => {
-        //     let element = document.getElementById('scroll_to');
+        //     let element = document.getElementById('scroll_to_2');
         //     element.scrollIntoView();
-        // }, 100)
+        // }, 1)
+            
+        }
+
     }
 
     return (
         
         <div class="chat" >
             <div class="messages_title" >
-                <div id='back_arrow' >
-                    <img onClick={() => {dispatch(ToggleChat())}}  src={process.env.PUBLIC_URL + '/images/Messages/back_arrow.svg'} alt="" width="20px" height="20px" />
+                <div id='back_arrow' onClick={() => {dispatch(ToggleChat())}} >
+                    <img  src={process.env.PUBLIC_URL + '/images/Messages/back_arrow.svg'} alt="" width="20px" height="20px" />
                 </div>
-                <div id='Chat_header' onClick={() => {dispatch(msgsToggle())}}>
+                <div class='Chat_header' onClick={() => {dispatch(msgsToggle())}}>
                     <span id='profile_name'>{profile_name}</span>
                     <span id='profile_id'>@{profile_id}</span>
                 </div>
-                <div onClick={() => {dispatch(msgsToggle())}}>
-                    <img className={!isUp ? 'arrow1': 'arrow2' } src={process.env.PUBLIC_URL + '/images/Messages/double-up-arrow.svg'} alt="" width="20px" height="20px" />
+                <div className={!isUp ? 'arrow1': 'arrow2' } onClick={() => {dispatch(msgsToggle())}} >
+                    <img  src={process.env.PUBLIC_URL + '/images/Messages/double-up-arrow.svg'} alt="" width="20px" height="20px" />
                 </div>
             </div>
                 <div class="message_body">
@@ -73,14 +78,15 @@ function Chat() {
                     }
                     </div>
                 </div>
-            <div id="scroll_to"></div>
+            <div id="scroll_to_1"></div>
+            <div id="scroll_to_2"></div>
             <div class="message_input_bg">
                 <div class="message_input" >
                         <img src={process.env.PUBLIC_URL + '/images/Messages/media.svg'} alt="" width="20px" height="20px" />
                         <img src={process.env.PUBLIC_URL + '/images/Messages/GIF.svg'} alt="" width="20px" height="20px" />
                         <img src={process.env.PUBLIC_URL + '/images/Messages/emoji.svg'} alt="" width="20px" height="20px" />
-                        <input type="text" size="30" onChange={(obj) => {helperfun(obj.target.value)}} placeholder="Start a new message" />
-                        <button type="button" onClick={() => {msgAdding(idAndMsg)}} ><img  src={process.env.PUBLIC_URL + '/images/Messages/send.svg'} alt="" width="20px" height="20px" /></button>
+                        <input type="text" size="30" id='inputMsg' onChange={(obj) => {helperfun(obj.target.value)}} placeholder="Start a new message" />
+                        <button type="button" id='sendMsg' onClick={() => {msgAdding(idAndMsg)}} ><img  src={process.env.PUBLIC_URL + '/images/Messages/send.svg'} alt="" width="20px" height="20px" /></button>
                 </div>
             </div>
         </div>

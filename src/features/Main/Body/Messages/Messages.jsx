@@ -25,8 +25,12 @@ function Messages(){
                 <>
                     <div class="messages_title" onClick={() => {dispatch(msgsToggle())}} >
                         <span>Messages</span>
-                        <img src={process.env.PUBLIC_URL + '/images/Messages/Message.svg'} alt="" width="20px" height="20px" />
-                        <img className={isUp ? 'arrow2': 'arrow1' } src={process.env.PUBLIC_URL + '/images/Messages/double-up-arrow.svg'} alt="" width="20px" height="20px" />
+                        <div>
+                            <img src={process.env.PUBLIC_URL + '/images/Messages/Message.svg'} alt="" width="20px" height="20px" />
+                        </div>
+                        <div className={isUp ? 'arrow2': 'arrow1' } >
+                            <img src={process.env.PUBLIC_URL + '/images/Messages/double-up-arrow.svg'} alt="" width="20px" height="20px" />
+                        </div>
                     </div> 
 
                     <div class="message_requests">

@@ -19,7 +19,7 @@
 .messages1{
     position: fixed;
     bottom: -0vh;
-    right: 1vw;
+    right: 2vw;
     width: 400px;
     height: 74vh;
     border: solid rgb(239,243,244) 1px;
@@ -34,7 +34,7 @@
 .messages2{
     position: fixed;
     bottom: -67vh;
-    right: 1vw;
+    right: 2vw;
     width: 400px;
     height: 74vh;
     border: solid rgb(239,243,244) 1px;

@@ -16,9 +16,11 @@ function Messages_comps(props){
         dispatch(ToggleChatCombiner(obj));
 
         setTimeout(() => {
-            let element = document.getElementById("scroll_to");
+            let element = document.getElementById("scroll_to_1");
             element.scrollIntoView();
         }, 1);
+        // // setTimeout(()=> {
+        // // }, 1);
     }
     
     return(

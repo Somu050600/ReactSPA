@@ -30,7 +30,7 @@ function Left(){
             </a>
             <a href="" class="profile">
                 <div class="profile_div">
-                    <img src={process.env.PUBLIC_URL + `/images/Left_SVGs/Profile_img.png`} alt="" class="profile_img" width="40px" height="40px" />
+                    <img src={process.env.PUBLIC_URL + `/images/Left_SVGs/profile_img.png`} alt="" class="profile_img" width="40px" height="40px" />
                     <div id="profile">
                     <span id="profile_name">Somu</span>
                     <span id="profile_id">@Somu123</span>
